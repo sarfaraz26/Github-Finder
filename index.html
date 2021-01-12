@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Finder</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/1dc77e3122.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    .tbox {
+        width: 47%;
+        height: 70px;
+        border: 1px solid black;
+        padding: 5px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <div class="container-fluid bg-dark text-center pt-2 pb-2">
+        <h1 class="text-center text-light"><i class="fab fa-github mr-2"></i>Github Finder</h1>
+    </div>
+
+    <div class="container text-center pt-3 pb-3">
+        <form method="POST">
+            <input type="text" name="" id="form-input" class="form-control mt-2" style="border: 1px solid gray;" required
+                autocomplete="off" placeholder="Enter Github Username..">
+            <button type="submit" class="btn btn-secondary mt-2 mb-4"><i class="fa fa-search mr-2"
+                    aria-hidden="true"></i>Search</button>
+        </form>
+
+        <div class="row">
+            <div class="col-md-4 rounded-left" style="background-color: rgb(170, 160, 160); border: 2px solid black; ">
+                <img src="" alt="avatar-url"
+                    class="rounded-circle mt-4" id="user-avatar" height="150" width="150">
+                <h2 class="mt-1" id="user-name"><b></b></h2>
+                <p class="text-secondary font-weight-bold" id="user-login"></p>
+                <div class="row pb-4 mt-3">
+                    <div class="col-md-4">
+                        <h5 >Followers</h5>
+                        <h5 class="text-primary" id="user-followers"></h5>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Following</h5>
+                        <h5 class="text-danger" id="user-following"></h5>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Repos</h5>
+                        <h5 class="text-success" id="user-repos"></h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8 rounded-right bg-dark" style="border: 2px solid black;">
+                <h1 class="text-secondary">Repositories</h1>
+
+                <div class="testimonials" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                    <div class="tbox">
+                        <h5 class="text-light" id="t1-title"></h5>
+                        <div class="row">
+                            <div class="col">
+                                <i class="fas fa-star text-light" id="t1-star">&nbsp;</i>
+                            </div>
+                            <div class="col">
+                                <i class="fas fa-code-branch text-light" id="t1-branch">&nbsp;</i>
+                            </div>
+                            <div class="col">
+                                <i class="fas fa-file text-light" id="t1-size">&nbsp;</i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tbox">
+                        <h5 class="text-light" id="t2-title"></h5>
+                        <div class="row">
+                            <div class="col">
+                                <i class="fas fa-star text-light" id="t2-star">&nbsp;</i>
+                            </div>
+                            <div class="col">
+                                <i class="fas fa-code-branch text-light" id="t2-branch">&nbsp;</i>
+                            </div>
+                            <div class="col">
+                                <i class="fas fa-file text-light" id="t2-size">&nbsp;</i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tbox">
+                        <h5 class="text-light" id="t3-title"></h5>
+                        <div class="row">
+                            <div class="col">
+                                <i class="fas fa-star text-light" id="t3-star">&nbsp;</i>
+                            </div>
+                            <div class="col">
+                                <i class="fas fa-code-branch text-light" id="t3-branch">&nbsp;</i>
+                            </div>
+                            <div class="col">
+                                <i class="fas fa-file text-light" id="t3-size">&nbsp;</i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tbox">
+                        <h5 class="text-light" id="t4-title"></h5>
+                        <div class="row">
+                            <div class="col">
+                                <i class="fas fa-star text-light" id="t4-star">&nbsp;</i>
+                            </div>
+                            <div class="col">
+                                <i class="fas fa-code-branch text-light" id="t4-branch">&nbsp;</i>
+                            </div>
+                            <div class="col">
+                                <i class="fas fa-file text-light" id="t4-size">&nbsp;</i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tbox">
+                        <h5 class="text-light" id="t5-title"></h5>
+                        <div class="row">
+                            <div class="col">
+                                <i class="fas fa-star text-light" id="t5-star">&nbsp;</i>
+                            </div>
+                            <div class="col">
+                                <i class="fas fa-code-branch text-light" id="t5-branch">&nbsp;</i>
+                            </div>
+                            <div class="col">
+                                <i class="fas fa-file text-light" id="t5-size">&nbsp;</i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tbox">
+                        <h5 class="text-light" id="t6-title"></h5>
+                        <div class="row">
+                            <div class="col">
+                                <i class="fas fa-star text-light" id="t6-star">&nbsp;</i>
+                            </div>
+                            <div class="col">
+                                <i class="fas fa-code-branch text-light" id="t6-branch">&nbsp;</i>
+                            </div>
+                            <div class="col">
+                                <i class="fas fa-file text-light" id="t6-size">&nbsp;</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-light">For more : visit <a href="" target="_blank" id="user-account-link"></a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <p class="text-secondary">© Copyight 2020 - Sarfaraz Ansari - All rights reserved</p>
+    </footer>
+
+
+
+
+    <script src="./script.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
